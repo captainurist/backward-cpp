@@ -4266,10 +4266,10 @@ public:
 #warning ":/ sorry, ain't know no nothing none not of your architecture!"
 #endif
     if (error_addr) {
-      st.load_from(error_addr, 32, reinterpret_cast<void *>(uctx),
+      st.load_from(error_addr, 64, reinterpret_cast<void *>(uctx),
                    info->si_addr);
     } else {
-      st.load_here(32, reinterpret_cast<void *>(uctx), info->si_addr);
+      st.load_here(64, reinterpret_cast<void *>(uctx), info->si_addr);
     }
 
     Printer printer;
